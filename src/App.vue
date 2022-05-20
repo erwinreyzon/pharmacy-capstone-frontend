@@ -5,6 +5,8 @@
     <router-link to="/about">About</router-link>
     |
     <router-link to="/drugs">Drugs</router-link>
+    |
+    <router-link to="/signup">Signup</router-link>
   </nav>
   <router-view />
 </template>
