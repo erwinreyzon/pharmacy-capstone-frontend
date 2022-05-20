@@ -8,7 +8,7 @@ export default {
     };
   },
   created: function () {
-    axios.get("localhost:3000/drugs/" + this.$route.params.id + ".json").then((response) => {
+    axios.get("/drugs/" + this.$route.params.id + ".json").then((response) => {
       console.log("Show Drug", response.data);
       this.drug = response.data;
     });
@@ -16,4 +16,9 @@ export default {
 };
 </script>
 
-<template></template>
+<template>
+  <h1>{{ drug.name }}</h1>
+  <img :src="drug.image_url" :alt="drug.name" />
+  <p>Classification: {{ drug.classification }}</p>
+  <p>Description: {{ drug.description }}</p>
+</template>

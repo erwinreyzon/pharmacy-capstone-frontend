@@ -23,6 +23,7 @@ export default {
   <div v-for="drug in drugs" v-bind:key="drug.id">
     <img :src="drug.image_url" :alt="drug.name" />
     <p>Name: {{ drug.name }}</p>
-    <p>Classification: {{ drug.classification.name }}</p>
+    <p>Classification: {{ drug.classification }}</p>
+    <a :href="`/drugs/${drug.id}`">More Info</a>
   </div>
 </template>

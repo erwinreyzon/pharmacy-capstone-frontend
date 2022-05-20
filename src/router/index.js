@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import DrugIndex from "../views/DrugIndex.vue";
+import DrugShow from "../views/DrugShow.vue";
 
 const routes = [
   {
@@ -17,9 +18,14 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
   },
   {
-    path: "/drug_index",
-    name: "drug_index",
+    path: "/drugs",
+    name: "drugs",
     component: DrugIndex,
+  },
+  {
+    path: "/drugs/:id",
+    name: "drug",
+    component: DrugShow,
   },
 ];
 
