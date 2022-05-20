@@ -4,6 +4,7 @@ import DrugIndex from "../views/DrugIndex.vue";
 import DrugShow from "../views/DrugShow.vue";
 import SignUp from "../views/SignUp.vue";
 import LogIn from "../views/LogIn.vue";
+import LogOut from "../views/LogOut.vue";
 
 const routes = [
   {
@@ -38,6 +39,11 @@ const routes = [
     path: "/login",
     name: "login",
     component: LogIn,
+  },
+  {
+    path: "/logout",
+    name: "logout",
+    component: LogOut,
   },
 ];
 
