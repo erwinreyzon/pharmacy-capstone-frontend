@@ -9,6 +9,12 @@ export default {
       drug: {},
     };
   },
+  created: function () {
+    axios.get("/drugs/" + this.$route.params.id + ".json").then((response) => {
+      console.log("Show Drug", response.data);
+      this.drug = response.data;
+    });
+  },
   methods: {
     createDrugUser: function () {
       console.log("Adding Drug to User");
@@ -20,17 +26,13 @@ export default {
           this.drug_users.push(response.data);
         })
         .catch((error) => console.log(error.response));
-
-      axios.get("/drugs/" + this.$route.params.id + ".json").then((response) => {
-        console.log("Show Drug", response.data);
-        this.drug = response.data;
-      });
     },
   },
 };
 </script>
 
 <template>
+  <h1>{{ drug.name }}</h1>
   <div class="druguser-new">
     <form v-on:submit.prevent="createDrugUser()">
       <h1>Please Input Information</h1>
@@ -49,10 +51,12 @@ export default {
           <input type="text" v-model="newDrugUserParams.directions" />
         </div>
         <div class="form-group">
-          Drug:
-          <input type="text" v-model="drug.id" />
+          Drug ID:
+          <input type="text" v-model="newDrugUserParams.drug_id" />
+          <p>{{ drug.id }}</p>
         </div>
       </div>
+      <input type="submit" value="create" />
     </form>
   </div>
 </template>
