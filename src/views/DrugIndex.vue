@@ -25,5 +25,6 @@ export default {
     <p>Name: {{ drug.name }}</p>
     <p>Classification: {{ drug.classification }}</p>
     <a :href="`/drugs/${drug.id}`">More Info</a>
+    <a :href="`/drug_users/${drug.id}`">Add Drug</a>
   </div>
 </template>
