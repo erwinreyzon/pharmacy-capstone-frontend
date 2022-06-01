@@ -14,6 +14,14 @@ export default {
       console.log("All Drugs", this.drug_users);
     });
   },
+  methods: {
+    destroyDrugUser: function (drug_user) {
+      axios.delete("/drug_users/" + drug_user.id).then((response) => {
+        console.log("Drug User Destroy", response);
+        this.$router.push("/drug_users");
+      });
+    },
+  },
 };
 </script>
 
@@ -28,5 +36,7 @@ export default {
     <a :href="`/drugs/${drug_user.drug_id}`">More Info</a>
     <br />
     <a v-bind:href="`/drug_users/${drug_user.id}/edit`">Edit</a>
+    <br />
+    <button v-on:click="destroyDrugUser(drug_user)">Remove from List</button>
   </div>
 </template>
