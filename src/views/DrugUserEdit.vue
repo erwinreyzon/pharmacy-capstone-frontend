@@ -30,8 +30,8 @@ export default {
 </script>
 
 <template>
-  <h1>{{ drug_user.drug }}</h1>
   <form v-on:submit.prevent="updateDrugUser()">
+    <h1>{{ drug_user.drug }}</h1>
     <h1>Please Edit Information</h1>
 
     <div>
