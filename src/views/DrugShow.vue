@@ -21,4 +21,5 @@ export default {
   <img :src="drug.image_url" :alt="drug.name" />
   <p>Classification: {{ drug.classification }}</p>
   <p>Description: {{ drug.description }}</p>
+  <a :href="`/drug_users/${drug.id}`">Add Drug</a>
 </template>
