@@ -26,5 +26,7 @@ export default {
     <p>Directions: {{ drug_user.directions }}</p>
     <p>Quantity: {{ drug_user.quantity }}</p>
     <a :href="`/drugs/${drug_user.drug_id}`">More Info</a>
+    <br />
+    <a v-bind:href="`/drug_users/${drug_user.id}/edit`">Edit</a>
   </div>
 </template>

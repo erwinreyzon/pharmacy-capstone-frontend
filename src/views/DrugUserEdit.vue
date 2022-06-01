@@ -48,6 +48,6 @@ export default {
         <input type="text" v-model="drug_user.directions" />
       </div>
     </div>
-    <input type="submit" value="create" />
+    <input type="submit" value="edit" />
   </form>
 </template>
