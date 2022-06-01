@@ -39,4 +39,6 @@ export default {
     <br />
     <button v-on:click="destroyDrugUser(drug_user)">Remove from List</button>
   </div>
+
+  <a v-bind:href="`/drug_users/inactive`">View Removed Drugs</a>
 </template>

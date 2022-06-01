@@ -8,6 +8,7 @@ import LogOut from "../views/LogOut.vue";
 import DrugUserNew from "../views/DrugUserNew.vue";
 import DrugUserIndex from "../views/DrugUserIndex.vue";
 import DrugUserEdit from "../views/DrugUserEdit.vue";
+import DrugUserInactive from "../views/DrugUserInactive.vue";
 
 const routes = [
   {
@@ -62,6 +63,11 @@ const routes = [
     path: "/drug_users/:id/edit",
     name: "drug_user-edit",
     component: DrugUserEdit,
+  },
+  {
+    path: "/drug_users/inactive",
+    name: "drug_user-inactive",
+    component: DrugUserInactive,
   },
 ];
 
